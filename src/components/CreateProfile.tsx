@@ -14,7 +14,7 @@ export const CreateProfile: React.FC<CreateProfileProps> = ({ onProfileCreated }
     age: '',
     interests: [] as string[]
   });
-  
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
 
@@ -35,7 +35,7 @@ export const CreateProfile: React.FC<CreateProfileProps> = ({ onProfileCreated }
     }
 
     setIsSubmitting(true);
-    
+
     try {
       const newUser = userService.createUser({
         name: formData.name,
@@ -61,7 +61,7 @@ export const CreateProfile: React.FC<CreateProfileProps> = ({ onProfileCreated }
   if (showSuccess) {
     return (
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900 flex items-center justify-center">
-        <div className="bg-white dark:bg-gray-800 rounded-xl p-8 max-w-md mx-4 border border-gray-200 dark:border-gray-700 text-center">
+        <div className="bg-white dark:bg-gray-800 rounded-xl p-8 max-w-md mx-4 border border-gray-200 dark:border-gray-700 hover:border-green-400 dark:hover:border-green-500 hover:shadow-lg hover:shadow-green-200/50 dark:hover:shadow-green-900/50 transition-all duration-300 text-center">
           <div className="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-4">
             <CheckCircle className="w-8 h-8 text-green-600 dark:text-green-400" />
           </div>
@@ -79,7 +79,7 @@ export const CreateProfile: React.FC<CreateProfileProps> = ({ onProfileCreated }
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-8">
       <div className="max-w-4xl mx-auto px-4">
-        <div className="bg-white dark:bg-gray-800 rounded-xl p-8 border border-gray-200 dark:border-gray-700">
+        <div className="bg-white dark:bg-gray-800 rounded-xl p-8 border border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-500 hover:shadow-lg hover:shadow-blue-200/50 dark:hover:shadow-blue-900/50 transition-all duration-300">
           <div className="text-center mb-8">
             <div className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
               <UserIcon className="w-8 h-8 text-white" />
@@ -133,7 +133,7 @@ export const CreateProfile: React.FC<CreateProfileProps> = ({ onProfileCreated }
                 </label>
                 <span className="text-sm text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded">(Select at least 2)</span>
               </div>
-              
+
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
                 {availableInterests.map((interest) => (
                   <button
@@ -153,7 +153,7 @@ export const CreateProfile: React.FC<CreateProfileProps> = ({ onProfileCreated }
                   </button>
                 ))}
               </div>
-              
+
               <div className="flex items-center justify-between p-4 bg-gray-100 dark:bg-gray-700 rounded-lg">
                 <span className="text-sm text-gray-600 dark:text-gray-300">
                   Selected interests: <span className="font-bold text-blue-600 dark:text-blue-400">{formData.interests.length}</span>

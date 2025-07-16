@@ -93,7 +93,7 @@ export const MatchesView: React.FC<MatchesViewProps> = ({ currentUser }) => {
         </div>
 
         {/* Search Form */}
-        <div className="bg-white dark:bg-gray-800 rounded-xl p-6 mb-8 border border-gray-200 dark:border-gray-700">
+        <div className="bg-white dark:bg-gray-800 rounded-xl p-6 mb-8 border border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-500 hover:shadow-lg hover:shadow-blue-200/50 dark:hover:shadow-blue-900/50 transition-all duration-300">
           <form onSubmit={handleSearch} className="flex gap-4">
             <div className="flex-1 relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -124,7 +124,7 @@ export const MatchesView: React.FC<MatchesViewProps> = ({ currentUser }) => {
 
         {/* Current User Info */}
         {selectedUser && (
-          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 mb-8 border border-gray-200 dark:border-gray-700">
+          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 mb-8 border border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-500 hover:shadow-lg hover:shadow-blue-200/50 dark:hover:shadow-blue-900/50 transition-all duration-300">
             <div className="flex items-center space-x-4">
               <div className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center text-white text-xl font-bold">
                 {selectedUser.name.charAt(0)}
@@ -162,7 +162,7 @@ export const MatchesView: React.FC<MatchesViewProps> = ({ currentUser }) => {
               {matches.map((match, index) => (
                 <div
                   key={match.user.id}
-                  className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow"
+                  className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-lg hover:border-blue-400 dark:hover:border-blue-500 hover:shadow-blue-200/50 dark:hover:shadow-blue-900/50 transition-all duration-300"
                 >
                   {/* Match Rank Badge */}
                   {index < 3 && (

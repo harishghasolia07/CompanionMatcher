@@ -42,16 +42,16 @@ export const HomePage: React.FC<HomePageProps> = ({ onViewChange }) => {
               <Users className="w-8 h-8 text-white" />
             </div>
           </div>
-          
+
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
             Discover Your Next Best Friend
           </h1>
-          
+
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8">
-            Connect with amazing people who share your passions. Build meaningful friendships 
+            Connect with amazing people who share your passions. Build meaningful friendships
             through our intelligent matching platform.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <button
               onClick={() => onViewChange('create-profile')}
@@ -91,7 +91,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onViewChange }) => {
             Why Choose Our Platform?
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Experience thoughtfully designed features that prioritize authentic relationships 
+            Experience thoughtfully designed features that prioritize authentic relationships
             and meaningful interactions.
           </p>
         </div>
@@ -100,7 +100,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onViewChange }) => {
           {features.map((feature, index) => {
             const IconComponent = feature.icon;
             return (
-              <div key={index} className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
+              <div key={index} className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-lg hover:border-blue-400 dark:hover:border-blue-500 hover:shadow-blue-200/50 dark:hover:shadow-blue-900/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center mb-4">
                   <IconComponent className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                 </div>
@@ -114,13 +114,13 @@ export const HomePage: React.FC<HomePageProps> = ({ onViewChange }) => {
 
       {/* CTA Section */}
       <div className="max-w-6xl mx-auto px-4 py-16">
-        <div className="bg-white dark:bg-gray-800 rounded-xl p-8 border border-gray-200 dark:border-gray-700">
+        <div className="bg-white dark:bg-gray-800 rounded-xl p-8 border border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-500 hover:shadow-lg hover:shadow-blue-200/50 dark:hover:shadow-blue-900/50 transition-all duration-300">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
               Ready to Make New Friends?
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-              Join our growing community of individuals who have discovered meaningful friendships 
+              Join our growing community of individuals who have discovered meaningful friendships
               through shared interests and genuine connections.
             </p>
             <button
